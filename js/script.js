@@ -5,6 +5,10 @@ const qrCodeInput = document.querySelector("#qr-form input")
 const qrCodeImg = document.querySelector("#qr-code img")
 
 
+const btnDownload = document.querySelector("#btn-download")
+const linkDownload = document.querySelector("#link-download")
+
+
 function generateQrCode(){
     const qrCodeInputValue = qrCodeInput.value
 
@@ -18,12 +22,21 @@ function generateQrCode(){
         container.classList.add("active");
         qrCodeBtn.innerText = "Qr Code criado"
     })
+
+    
 }
 
+function downloadQrCode() {
+    linkDownload.href = qrCodeImg.src
+    linkDownload.download = "QrCode.png"
+    linkDownload.click()
+}
 
 qrCodeBtn.addEventListener("click", () => {
     generateQrCode()
 })
+
+3
 qrCodeInput.addEventListener("keydown", (e) => {
     if(e.code === "Enter"){
         generateQrCode()
@@ -39,3 +52,6 @@ qrCodeInput.addEventListener("keyup", () => {
         qrCodeBtn.innerText = "Gerar Qr Code"
     }
 })
+
+
+btnDownload.addEventListener("click", downloadQrCode)

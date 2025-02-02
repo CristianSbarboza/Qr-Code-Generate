@@ -16,7 +16,7 @@ body{
 }
 
 .container.active{
-    height: 500px;
+    height: 550px;
 }
 
 #qr-header{
@@ -78,5 +78,29 @@ body{
 
 
 .container.active #qr-code{
+    opacity: 1;
+}
+
+#btn-container{
+    margin: 20px 15px;
+}
+
+
+#btn-container button{
+    
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+
+    background-color: #086824;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.4s;
+}
+
+#btn-container button:hover, #btn-container button:active{
     opacity: 1;
 }
