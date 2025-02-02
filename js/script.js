@@ -55,3 +55,5 @@ qrCodeInput.addEventListener("keyup", () => {
 
 
 btnDownload.addEventListener("click", downloadQrCode)
+
+
