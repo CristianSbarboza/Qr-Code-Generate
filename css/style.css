@@ -106,3 +106,18 @@ body{
 .container.active #btn-container button{
     opacity: 1;
 }
+
+
+
+@media (max-width: 450px) {
+    .container{
+        width: 300px;
+
+    }
+
+    .container.active{
+        height: 600px;
+    }
+
+    
+}
